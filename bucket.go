@@ -17,7 +17,10 @@ type Bucket struct {
 	ID        string `json:"id"`
 	Marker    string `json:"marker"`
 	IndexType string `json:"index_type"`
-	Owner     string `json:"owner"`
+	Owner     struct{
+		ID string `json:"id"`
+		DisplayName string `json:"display_name"`
+	} `json:"owner"`
 	Ver       string `json:"ver"`
 	MasterVer string `json:"master_ver"`
 	Mtime     string `json:"mtime"`
